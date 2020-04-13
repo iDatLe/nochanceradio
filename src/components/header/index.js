@@ -9,7 +9,7 @@ const Header = () => {
 
   const overlay = classnames('overlay', {
     active: isOverlayActive,
-    // inactive: !isOverlayActive,
+    inactive: !isOverlayActive,
   })
 
   const openOverlay = e => {

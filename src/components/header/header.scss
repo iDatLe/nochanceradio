@@ -72,41 +72,39 @@
       }
 
       .overlay {
-        display: none;
+        // display: none;
+        width: 100vw;
         height: 100vh;
         position: absolute;
         top: 0;
-        right: 0;
+        right: auto;
+        transition: all 0.8s ease;
+        background-color: black;
+        opacity: 0;
 
         &.active {
-          width: 100vw;
           display: block;
-          animation: overlayBackground 1s forwards;
+          right: 0;
+          opacity: 1;
+
           .links {
-            animation: overlay 1s forwards;
+            width: 80%;
           }
         }
 
-        // &.inactive {
-        //   animation: overlayBackgroundClose 1s both;
-        //   .links {
-        //     animation: overlayClose 0.8s both;
-        //   }
-        // }
-
         .links {
+          transition: width 0.5s ease;
           position: absolute;
           background-color: white;
           flex-direction: column;
           align-items: baseline;
-          box-shadow: -7px 13px 23px -15px rgba(0, 0, 0, 0.11);
           padding-top: 50px;
           z-index: 10;
 
           top: 0;
           right: 0;
           height: 100vh;
-          width: 80%;
+          width: 0%;
 
           > a {
             font-size: 16px;
@@ -117,45 +115,5 @@
         }
       }
     }
-  }
-}
-
-@keyframes overlay {
-  from {
-    width: 0%;
-  }
-
-  to {
-    width: 80%;
-  }
-}
-
-@keyframes overlayClose {
-  from {
-    width: 80%;
-  }
-
-  to {
-    width: 0%;
-  }
-}
-
-@keyframes overlayBackground {
-  from {
-    background-color: transparent;
-  }
-
-  to {
-    background-color: black;
-  }
-}
-
-@keyframes overlayBackgroundClose {
-  from {
-    background-color: black;
-  }
-
-  to {
-    background-color: transparent;
   }
 }
