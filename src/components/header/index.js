@@ -7,8 +7,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="left-side">
-        <ThreeDots />
-        {/* <img src={ThreeDots} /> */}
+        <ThreeDots className="vertical-three-dots" />
         <h1>
           <Link to="/">NO CHANCE</Link>
         </h1>

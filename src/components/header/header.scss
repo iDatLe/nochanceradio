@@ -4,18 +4,19 @@
   padding: $padding-large $padding-small;
   background-color: #050505;
 
-  svg {
-    fill: white;
-  }
-
   .left-side {
     display: flex;
     align-items: center;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
       sans-serif;
 
-    @media (max-width: $media-medium) {
-      display: block;
+    svg {
+      width: 25px;
+      height: 25px;
+      fill: white;
+
+      transform: rotate(90deg);
+      display: none;
     }
 
     h1 {
@@ -32,10 +33,21 @@
       align-items: center;
 
       > a {
-        margin-right: 10px;
-        margin-left: 10px;
-        text-decoration: none;
+        margin-right: $margin-small;
+        margin-left: $margin-small;
+        font-size: 11px;
+        letter-spacing: 0.1em;
         color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+
+    @media (max-width: $media-medium) {
+      display: block;
+
+      svg {
+        display: block;
       }
     }
   }
