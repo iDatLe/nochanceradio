@@ -1,11 +1,14 @@
 import { Link } from "gatsby"
 import React from "react"
 import "./header.scss"
+import ThreeDots from "../../images/three-dots.svg"
 
 const Header = () => {
   return (
     <div className="header">
       <div className="left-side">
+        <ThreeDots />
+        {/* <img src={ThreeDots} /> */}
         <h1>
           <Link to="/">NO CHANCE</Link>
         </h1>

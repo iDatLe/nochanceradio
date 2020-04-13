@@ -9,11 +9,7 @@ const Home = () => {
     description: "Home page of No Chance Radio",
     page: "/",
   }
-  return (
-    <Layout seo={seo}>
-      <div>hi</div>
-    </Layout>
-  )
+  return <Layout seo={seo}>{/* <div>hi</div> */}</Layout>
 }
 
 export default Home
