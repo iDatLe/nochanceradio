@@ -5,21 +5,6 @@
   background-color: #050505;
   position: relative;
 
-  @media (max-width: $media-medium) {
-    // .overlay {
-    //   display: none;
-    //   &.active {
-    //     height: 100vh;
-    //     width: 100vw;
-    //     background-color: black;
-    //     display: block;
-    //     position: absolute;
-    //     top: 0;
-    //     right: 0;
-    //   }
-    // }
-  }
-
   .left-side {
     display: flex;
     align-items: center;
@@ -62,6 +47,10 @@
     @media (max-width: $media-medium) {
       display: flex;
 
+      h1 {
+        margin: auto;
+      }
+
       svg {
         display: block;
         position: relative;
@@ -72,29 +61,26 @@
       }
 
       .overlay {
-        // display: none;
-        width: 100vw;
-        height: 100vh;
-        position: absolute;
-        top: 0;
-        right: auto;
-        transition: all 0.8s ease;
+        transition: all 0.5s ease;
         background-color: black;
         opacity: 0;
 
         &.active {
-          display: block;
+          position: absolute;
+          top: 0;
           right: 0;
+          width: 100vw;
+          height: 100vh;
           opacity: 1;
 
           .links {
-            width: 80%;
+            right: 0%;
           }
         }
 
         .links {
-          transition: width 0.5s ease;
-          position: absolute;
+          transition: all 0.5s ease;
+          position: fixed;
           background-color: white;
           flex-direction: column;
           align-items: baseline;
@@ -102,9 +88,9 @@
           z-index: 10;
 
           top: 0;
-          right: 0;
+          right: -80%;
           height: 100vh;
-          width: 0%;
+          width: 80%;
 
           > a {
             font-size: 16px;
